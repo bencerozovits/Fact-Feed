@@ -6,13 +6,23 @@
     <title>Fact Feed</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <img src="logo.png" height="68" width="68" alt="Fact Feed Logo" />
+
+      <!-- Fonts from Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Coiny&family=Sono:wght@400;600;700&display=swap"
+        rel="stylesheet"
+      />
+
+      <link href="style.css" rel="stylesheet" />
       <h1>Fact Feed</h1>
       <button>Share a fact</button>
     </header>
 
-    <form>
+    <form class="fact-form">
       <input type="text" placeholder="Share a fact with the world..." />
       <span>200</span>
       <input type="text" placeholder="Trustworthy source..." />
@@ -47,11 +57,13 @@
 
       <section>
         <ul>
-          <li>
+          <li class="fact">
             <p>
               React is being developed by Meta (formerly facebook)
               <a href="https://opensource.fb.com/" target="_blank">(Source)</a>
-              <span>#technology</span>
+              <span class="tag" style="background-color: #3b82f6"
+                >#technology</span
+              >
             </p>
             <div>
               <button>👍 <strong>20</strong></button>
@@ -59,7 +71,7 @@
               <button>⛔️ <strong>4</strong></button>
             </div>
           </li>
-          <li>
+          <li class="fact">
             <p>
               Millennial dads spend 3 times as much time with their kids than
               their fathers spent with them. In 1982, 43% of fathers had never
@@ -69,7 +81,9 @@
                 target="_blank"
                 >(Source)</a
               >
-              <span>#society</span>
+              <span class="tag" style="background-color: #eab308"
+                >#society</span
+              >
             </p>
             <div>
               <button>👍 <strong>11</strong></button>

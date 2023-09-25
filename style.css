@@ -1,0 +1,62 @@
+/* In terms of Full Stack workflow, you want to create your basic skeleton/mockup with HTML,
+then go through with CSS making each element look how you want it to, and then finally adding
+functionality using JavaScript/React etc. 
+
+Inspect Element can be used to experiment with the website without actually saving/changing anything
+fundamentally.
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #171717;
+  color: #fafafa;
+  font-family: "Sono", sans-serif;
+  padding: 40px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.fact-form {
+  background-color: #262626;
+  margin-bottom: 40px;
+  padding: 16px 40px;
+  text-align: center;
+}
+
+h1
+/* stylizes our h1 group, incase "Coiny" cannot be fetched sans serif will act as a backup font. */ {
+  font-size: 42px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Coiny", sans-serif;
+}
+
+.fact {
+  font-size: 20px;
+  line-height: 1.4;
+  background-color: #262626;
+  margin-bottom: 16px;
+  padding: 16px;
+  padding: 16px 24px;
+}
+
+.tag {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Coiny", sans-serif;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+ul {
+  list-style: none;
+}
