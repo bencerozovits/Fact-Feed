@@ -139,7 +139,7 @@ ul {
   background-image: linear-gradient(white, grey);
   border-radius: 35px;
 
-  transition: 0.3s;
+  transition: 0.3s; /* Time it takes to transition into hover mode */
 }
 
 .btn:hover {
