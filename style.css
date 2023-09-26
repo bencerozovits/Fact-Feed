@@ -17,11 +17,35 @@ body {
   background-color: #171717;
   color: #fafafa;
   font-family: "Sono", sans-serif;
-  padding: 40px;
+  padding: 48px 64px;
+}
+
+.container {
+  /* Centers our page regardless of the window size. */
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .header {
   margin-bottom: 40px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  box-shadow: 0px 0px 5px #fff;
+  border-radius: 50%;
+
+  display: flex;
+}
+
+.logo img {
+  /* This Selector selects all imgs within the logo class. */
+  width: 68px;
+  height: 68px;
 }
 
 .fact-form {
@@ -31,12 +55,24 @@ body {
   text-align: center;
 }
 
-h1
-/* stylizes our h1 group, incase "Coiny" cannot be fetched sans serif will act as a backup font. */ {
+.main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 48px;
+}
+
+h1 {
+  /* stylizes our h1 group, incase "Coiny" cannot be fetched sans serif will act as a backup font. */
   font-size: 42px;
   text-transform: uppercase;
   text-align: center;
   font-family: "Coiny", sans-serif;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+.category {
+  margin-bottom: 16px;
 }
 
 .fact {
@@ -46,6 +82,12 @@ h1
   margin-bottom: 16px;
   padding: 16px;
   padding: 16px 24px;
+  letter-spacing: -1px;
+  box-shadow: 0px 0px 5px #fff;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .tag {
@@ -57,6 +99,66 @@ h1
   padding-right: 10px;
 }
 
+.buttons {
+  /* auto automatically calculates the margin necessary for the reaction buttons to be on the
+  specified side */
+  margin-right: auto;
+}
+
 ul {
+  /* gets rid of the bullet points next to our buttons. */
   list-style: none;
+}
+
+.source,
+.source:visited {
+  color: #737373;
+  text-decoration: none;
+  margin-left: 12px;
+  transition: 0.35s;
+}
+
+.source:hover {
+  text-shadow: 0px 0px 5px #fff;
+  color: whitesmoke;
+}
+
+.source:active {
+  /* This Psuedo Class triggers whenever the link is clicked. */
+  color: white;
+}
+
+.btn {
+  border: none;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 16px 0 13px;
+
+  background-image: linear-gradient(white, grey);
+  border-radius: 35px;
+
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.btn-large {
+  font-size: 20px;
+  padding: 20px 32px 17px;
+}
+
+.btn-all-categories {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.btn-category {
+  width: 100%;
+  background-image: none;
 }
