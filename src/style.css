@@ -1,0 +1,267 @@
+/* In terms of Full Stack workflow, you want to create your basic skeleton/mockup with HTML,
+then go through with CSS making each element look how you want it to, and then finally adding
+functionality using JavaScript/React etc. 
+
+Inspect Element can be used to experiment with the website without actually saving/changing anything
+fundamentally.
+
+*/
+
+* {
+  /* Acts as the default values for all elements */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #171717;
+  color: #fafafa;
+  font-family: "Sono", sans-serif;
+  padding: 48px 64px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container {
+  /* Centers our page regardless of the window size. */
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.header {
+  /* Controls the layout of the header (space between logo, share a fact, fact feed text etc) */
+  margin-bottom: 40px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  /* Centers our page regardless of the window size. */
+  box-shadow: 0px 0px 5px #fff;
+  border-radius: 50%;
+
+  display: flex;
+}
+
+.logo img {
+  /* This Selector selects all imgs within the logo class. */
+  width: 68px;
+  height: 68px;
+}
+
+.main {
+  /* Create a grid layout for all elements below the header. */
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 900px) {
+  /* When the screen is less than 900px wide, the buttons will go from a row to column layout. */
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+h1 {
+  /* stylizes our h1 group, incase "Coiny" cannot be fetched sans serif will act as a backup font. */
+  font-size: 42px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+.category {
+  margin-bottom: 16px;
+}
+
+.fact {
+  /* Holds all the properties applied to the Fact boxes and the text in it. */
+  font-size: 20px;
+  line-height: 1.4;
+  background-color: #262626;
+  margin-bottom: 16px;
+  padding: 16px;
+  padding: 16px 24px;
+  letter-spacing: -1px;
+  box-shadow: 0px 0px 5px #fff;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (max-width: 1200px) {
+  /* For all Window Sizes under 1200px, the following code will be applied. */
+  .fact {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+}
+
+.tag {
+  /* Sets Properties for our tags (e.g. #technology, #society) */
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Coiny", sans-serif;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.vote-buttons {
+  /* Mainly reduces the spacing between the buttons using flex-shrink and
+  changes to a flex layout in order to allow them to be beside eachother horizontally. */
+  margin-left: auto;
+  flex-shrink: 0;
+
+  display: flex;
+  gap: 8px;
+}
+
+.vote-buttons button {
+  border: none;
+  background-color: #e5e5e5;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.vote-buttons button:hover {
+  background-color: grey;
+}
+
+.buttons {
+  /* auto automatically calculates the margin necessary for the reaction buttons to be on the
+  specified side */
+  margin-right: auto;
+}
+
+ul {
+  /* gets rid of the bullet points next to our buttons. */
+  list-style: none;
+}
+
+.source,
+.source:visited {
+  color: #737373;
+  text-decoration: none;
+  margin-left: 12px;
+  transition: 0.35s;
+}
+
+.source:hover {
+  text-shadow: 0px 0px 5px #fff;
+  color: whitesmoke;
+}
+
+.source:active {
+  /* This Psuedo Class triggers whenever the link is clicked. */
+  color: white;
+}
+
+.btn {
+  border: none;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 16px 0 13px;
+
+  background-image: linear-gradient(white, grey);
+  border-radius: 35px;
+
+  transition: 0.3s; /* Time it takes to transition into hover mode */
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.btn-large {
+  font-size: 20px;
+  padding: 20px 32px 17px;
+}
+
+.btn-all-categories {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.btn-category {
+  width: 100%;
+  background-image: none;
+}
+
+/* Form */
+.fact-form {
+  background-color: #262626;
+  margin-bottom: 40px;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+}
+
+.fact-form input,
+.fact-form select {
+  width: 220px;
+  background-color: grey;
+  border: none;
+  border-radius: 35px;
+  padding: 16px;
+  font-size: 18px;
+  font-family: inherit;
+}
+
+.fact-form input::placeholder {
+  /* This Psuedo Class changes the placeholder text inside our fact input boxes to grey */
+  color: #a3a3a3;
+}
+
+.fact-form input:first-child {
+  /* The :first-child part specifies that we want only the first textbox to have these
+  properties applied to it. 
+  
+  Flex Grow allows our first box to grow freelyto match the width of our fact-form.*/
+  flex-grow: 1;
+}
+
+.fact-form span {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 18px;
+}
+
+@media (max-width: 1000px) {
+  /* Adjusts the elements in our fact form box to  accommodate for window widths under 1000px.*/
+  body {
+    padding: 32px 48px;
+  }
+
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fact-form input,
+  .fact-form select {
+    width: auto;
+  }
+}
