@@ -4,14 +4,14 @@ import supabase from "./supabase";
 import "./style.css";
 
 const CATEGORIES = [
-  { name: "technology", color: "#FFFF00" },
-  { name: "science", color: "#00FF00" },
-  { name: "finance", color: "#800080" },
-  { name: "society", color: "#87CEEB" },
-  { name: "entertainment", color: "#FF6B6B" },
-  { name: "health", color: "#FF69B4" },
-  { name: "history", color: "#FFD700" },
-  { name: "news", color: "#FFA500" },
+  { name: "technology", color: "#d7dad9" },
+  { name: "science", color: "#d7dad9" },
+  { name: "finance", color: "#d7dad9" },
+  { name: "society", color: "#d7dad9" },
+  { name: "entertainment", color: "#d7dad9" },
+  { name: "health", color: "#d7dad9" },
+  { name: "history", color: "#d7dad9" },
+  { name: "news", color: "#d7dad9" },
 ];
 
 function App() {

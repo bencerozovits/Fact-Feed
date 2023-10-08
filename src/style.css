@@ -64,7 +64,8 @@ body {
 }
 
 section {
-  overflow: scroll;
+  overflow-y: auto;
+  padding-bottom: 40px;
 }
 
 .logo img {
@@ -110,7 +111,9 @@ h1 {
   line-height: 1.4;
   background-color: #262626;
   margin-bottom: 16px;
-  padding: 16px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 5px;
   padding: 16px 24px;
   letter-spacing: -1px;
   box-shadow: 0px 0px 5px #fff;
@@ -119,6 +122,22 @@ h1 {
   display: flex;
   align-items: center;
   gap: 24px;
+}
+
+/* Scrollbar Customisation */
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: 3px solid white;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #171717;
 }
 
 @media (max-width: 1200px) {
